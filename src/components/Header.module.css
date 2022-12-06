@@ -1,0 +1,11 @@
+.headerContainer {
+  background: var(--gray-700);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 4rem 0;
+}
+
+.headerContainer img {
+  width: 126px;
+}

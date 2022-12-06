@@ -1,0 +1,45 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: -27px;
+  margin-bottom: 64px;
+  padding: 0 16px;
+}
+
+.formContainer form {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  max-width: 736px;
+}
+
+.formContainer form input {
+  flex: 1;
+  font-size: 1rem;
+  padding: 16px;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  color: var(--gray-100);
+}
+
+.formContainer form button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray-100);
+  background: var(--blue-dark);
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.formContainer form button:hover {
+  background: var(--blue);
+}
