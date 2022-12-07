@@ -1,0 +1,90 @@
+.toDoComponentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 64px;
+  padding: 0 16px;
+}
+
+.status {
+  width: 100%;
+  max-width: 736px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.status h1:first-child {
+  font-size: 0.875rem;
+  color: var(--blue);
+  line-height: 17px;
+  padding: 0;
+}
+
+.status h1:first-child span {
+  padding: 2px 8px;
+  background: var(--gray-400);
+  color: var(--gray-200);
+  border-radius: 999px;
+}
+
+.status h1:last-child {
+  font-size: 0.875rem;
+  color: var(--purple);
+  line-height: 17px;
+  padding: 0;
+}
+
+.status h1:last-child span {
+  padding: 2px 8px;
+  background: var(--gray-400);
+  color: var(--gray-200);
+  border-radius: 999px;
+}
+
+.toDoList {
+  width: 100%;
+  max-width: 736px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 64px 24px;
+}
+
+.toDoListEmpty {
+  width: 100%;
+  max-width: 736px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #333333;
+  border-radius: 8px;
+  padding: 64px 24px;
+}
+
+.toDoListEmpty img {
+  margin-bottom: 16px;
+}
+
+.toDoListEmpty strong {
+  display: block;
+  color: var(--gray-300);
+  font-size: 1rem;
+  line-height: 140%;
+  text-align: center;
+}
+
+.toDoListEmpty span {
+  display: block;
+  color: var(--gray-300);
+  font-size: 1rem;
+  line-height: 140%;
+  text-align: center;
+}
+
