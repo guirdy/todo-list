@@ -1,0 +1,98 @@
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.checkButton,
+.noCheckButton {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  position: relative;
+  gap: 12px;
+  background: var(--gray-500);
+  color: var(--gray-100);
+  padding: 16px;
+  border: none;
+
+  border: 1px solid var(--gray-400);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px 0 0 8px;
+  border-right: none;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.checkButton:focus,
+.noCheckButton:focus {
+  box-shadow: none;
+}
+
+.checkContent {
+  display: flex;
+  gap: 12px;
+}
+
+.checkContent .checkSpan {
+  text-align: start;
+  font-size: 0.875rem;
+  color: var(--gray-300);
+}
+
+.checkContent .noCheckSpan {
+  text-align: start;
+  font-size: 0.875rem;
+}
+
+.checkButton {
+  text-decoration: line-through;
+}
+
+.checkSvg {
+  color: var(--blue);
+}
+
+.noCheckSvg {
+  color: var(--purple-dark);
+}
+
+.trashContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray-400);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  background: var(--gray-500);
+  border-radius: 0 8px 8px 0;
+  padding: 0 16px;
+  border-left: none;
+}
+
+.trashButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  z-index: 999;
+
+  transition: background 0.2s;
+}
+
+.trashButton:hover {
+  background: var(--gray-400);
+}
+
+.trashButton svg {
+  color: var(--gray-300);
+}
+
+.trashButton svg:hover {
+  color: var(--danger);
+}

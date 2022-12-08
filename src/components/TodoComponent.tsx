@@ -1,6 +1,7 @@
 import { ToDo } from "./ToDo";
 import Clipboard from "../assets/todo-icon.svg";
 import styles from "./ToDoComponent.module.css";
+import { useState } from "react";
 
 interface ToDoComponentProps {
   toDoList: string[];
@@ -8,19 +9,41 @@ interface ToDoComponentProps {
 }
 
 export function TodoComponent({ toDoList, setToDoList }: ToDoComponentProps) {
+  const [completeCount, setCompleteCount] = useState(0);
+
   const handleDeleteToDo = (deletedToDo: string) => {
     const updateToDo = toDoList.filter((toDo: string) => toDo !== deletedToDo);
     setToDoList(updateToDo);
   };
 
+  const handleTasksCompleted = (isComplete: boolean) => {
+    if (!isComplete) {
+      if (toDoList.length < completeCount) {
+        setCompleteCount(Number(toDoList.length));
+        return;
+      }
+      setCompleteCount((count) => {
+        return count + 1;
+      });
+      return;
+    }
+
+    setCompleteCount((count) => {
+      if (count > 0) {
+        return count - 1;
+      }
+      return 0;
+    });
+  }
+
   return (
     <div className={styles.toDoComponentContainer}>
       <div className={styles.status}>
         <h1>
-          Tarefas criadas <span>0</span>
+          Tarefas criadas <span>{toDoList.length}</span>
         </h1>
         <h1>
-          Concluídas <span>2 de 5</span>
+          Concluídas <span>{completeCount} de {toDoList.length}</span>
         </h1>
       </div>
 
@@ -30,6 +53,7 @@ export function TodoComponent({ toDoList, setToDoList }: ToDoComponentProps) {
             <ToDo
               key={description}
               description={description}
+              handleTasksCompleted={handleTasksCompleted}
               handleDeleteToDo={handleDeleteToDo}
             />
           ))}

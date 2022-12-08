@@ -43,3 +43,13 @@
 .formContainer form button:hover {
   background: var(--blue);
 }
+
+@media (max-width: 420px) {
+  .formContainer form {
+    flex-direction: column;
+  }
+
+  .formContainer form button {
+    justify-content: center;
+  }
+}

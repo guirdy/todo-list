@@ -8,16 +8,21 @@ export function Form() {
   const [toDoList, setToDoList] = useState<string[]>([]);
   const [inputText, setInputText] = useState("");
 
-  const handleCreateNewToDo = (event: FormEvent<HTMLFormElement>, text: string) => {
+  const handleCreateNewToDo = (
+    event: FormEvent<HTMLFormElement>,
+    text: string
+  ) => {
     event.preventDefault();
     setToDoList([...toDoList, text]);
-  }
+    setInputText("");
+  };
 
   return (
     <>
       <div className={styles.formContainer}>
         <form onSubmit={(event) => handleCreateNewToDo(event, inputText)}>
           <input
+            id="toDoDescription"
             type="text"
             placeholder="Adicione uma nova tarefa"
             value={inputText}
