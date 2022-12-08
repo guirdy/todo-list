@@ -8,6 +8,8 @@ export function Form() {
   const [toDoList, setToDoList] = useState<string[]>([]);
   const [inputText, setInputText] = useState("");
 
+  const disableButton = !inputText.length;
+
   const handleCreateNewToDo = (
     event: FormEvent<HTMLFormElement>,
     text: string
@@ -29,7 +31,7 @@ export function Form() {
             required
             onChange={(e) => setInputText(e.target.value)}
           />
-          <button>
+          <button disabled={disableButton}>
             Criar <IoMdAddCircleOutline size={19} />
           </button>
         </form>

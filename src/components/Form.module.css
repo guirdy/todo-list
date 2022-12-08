@@ -44,6 +44,11 @@
   background: var(--blue);
 }
 
+.formContainer button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 @media (max-width: 420px) {
   .formContainer form {
     flex-direction: column;
